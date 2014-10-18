@@ -253,7 +253,8 @@ ENDM
 ;*********************
 DebugPin		EQU	0	;o
 
-P2_PUSHPULL	EQU	(1 SHL DebugPin)
+;P2_PUSHPULL	EQU	(1 SHL DebugPin) ; P2.0 used to be set to pushpull
+P2_PUSHPULL	EQU	(0 SHL DebugPin) ; P2.0 should be set to open drain to prevent clashes in multi config (with weak pullup)
 
 
 ;**********************
